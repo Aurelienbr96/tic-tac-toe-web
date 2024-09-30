@@ -67,7 +67,7 @@ export const useWebSocketAdapter = ({
 
   const connect = (callback: () => void) => {
     socket
-      .connect("ws://websocket-dev.eu-west-3.elasticbeanstalk.com/ws")
+      .connect("wss://webs.aurelien-brachet.com//ws")
       .then(() => {
         socket.onReceiveMessage((msg) => handleMessage(msg));
         socket.onCloseConnection(handleOnCloseConnection);
