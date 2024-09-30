@@ -67,7 +67,7 @@ export const useWebSocketAdapter = ({
 
   const connect = (callback: () => void) => {
     socket
-      .connect("wss://webs.aurelien-brachet.com//ws")
+      .connect("ws://webs.aurelien-brachet.com/ws")
       .then(() => {
         socket.onReceiveMessage((msg) => handleMessage(msg));
         socket.onCloseConnection(handleOnCloseConnection);
